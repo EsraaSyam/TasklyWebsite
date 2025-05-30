@@ -1,0 +1,87 @@
+// ...existing code from your current AddTaskForm.module.scss...
+
+.form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 1.5rem 1.5rem;
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 6px 32px 0 rgba(80, 80, 120, 0.10);
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  animation: fadeInForm 0.4s cubic-bezier(.42,1.7,.62,.93);
+  position: relative;
+
+  @keyframes fadeInForm {
+    0% {
+      opacity: 0;
+      transform: scale(0.97) translateY(30px);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1) translateY(0);
+    }
+  }
+
+  h2 {
+    margin: 0 0 0.5rem 0;
+    color: #4f378b;
+    font-size: 1.32rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-align: center;
+  }
+
+  input,
+  textarea,
+  select {
+    padding: 0.75rem 1rem;
+    border: 1.5px solid #e0e7ff;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: inherit;
+    background: #f7f7fb;
+    transition: border-color 0.18s, box-shadow 0.18s;
+    outline: none;
+    box-shadow: 0 1px 3px #f3f4f6;
+
+    &:focus {
+      border-color: #4f378b;
+      box-shadow: 0 2px 8px #e0e7ff;
+      background: #fff;
+    }
+  }
+
+  textarea {
+    min-height: 70px;
+    resize: vertical;
+  }
+
+  button {
+    background: linear-gradient(90deg, #4f378b 0%, #7c3aed 100%);
+    color: white;
+    padding: 0.8rem 1.7rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.08rem;
+    font-weight: 600;
+    box-shadow: 0 2px 8px #e0e7ff;
+    transition: background 0.18s, box-shadow 0.18s, transform 0.13s;
+    outline: none;
+    letter-spacing: 0.2px;
+
+    &:hover,
+    &:focus {
+      background: linear-gradient(90deg, #7c3aed 0%, #4f378b 100%);
+      box-shadow: 0 4px 16px #e0e7ff;
+      transform: translateY(-2px) scale(1.04);
+    }
+
+    &:active {
+      background: #4f378b;
+      transform: scale(0.98);
+    }
+  }
+}
